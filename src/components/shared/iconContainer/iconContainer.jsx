@@ -3,11 +3,11 @@ import { StyledIcon } from "./iconContainer.styles";
 const IconContainer = ({
   iconName,
   alt,
-  width = "24px",
-  height = "24px",
+  width = "1.5rem",
+  height = "1.5rem",
   visibility,
 }) => {
-  const src = `/public/assets/icons/${iconName}`;
+  const src = `src/assets/icons/${iconName}`;
 
   return (
     <StyledIcon

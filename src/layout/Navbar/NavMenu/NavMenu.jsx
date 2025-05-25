@@ -1,5 +1,5 @@
-import IconContainer from "../../../components/shared/iconContainer/iconContainer.jsx";
-import { useSideNav } from "../../../context/SideNavContext.jsx";
+import IconContainer from "components/shared/iconContainer/iconContainer.jsx";
+import { useSideNav } from "context/SideNavContext/SideNavContext.js";
 import { Menu } from "./NavMenu.styles";
 
 function NavMenu() {

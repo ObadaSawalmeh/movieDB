@@ -17,9 +17,9 @@ export const HeaderWrapper = styled.header`
   height: 4rem;
   margin: 0 auto;
   width:100%;
-  max-width:1400px;
-  @media (min-width: 768px) {
-    padding: 0.5rem 2.5rem;
+  max-width:87.5rem;
+  @media (min-width: 76.5rem) {
+    padding: 0.5rem 1.5rem;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -37,7 +37,7 @@ export const CenterSection = styled.nav`
   display:flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: 768px) {
+  @media (min-width: 76.5rem) {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
@@ -48,7 +48,7 @@ export const RightSection = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  @media (max-width: 768px) {
+  @media (max-width: 76.5rem) {
     justify-content: flex-end;
   }
 `;

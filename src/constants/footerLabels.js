@@ -1,4 +1,3 @@
-// constants/footerLabels.js
 export const footerLabels = {
     theBasics: {
         title: "THE BASICS",

@@ -6,21 +6,21 @@ export const ControlsWrapper = styled.div`
   align-items: center;
   gap: 1rem;
   
-  @media (min-width: 768px) {
+  @media (min-width: 76.5rem) {
     gap: 2rem;
   }
 `;
 
 export const LanguageButton = styled.button`
-  width: 28px;
-  height: 26px;
+  width: 2.5rem;
+  height: 1.;
   padding: 3px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
   color: white;
-  border: 1px solid white;
+  border: .0625rem solid white;
   border-radius: 0.25rem;
   cursor: pointer;
   font-size: 0.8rem;
@@ -33,20 +33,24 @@ export const LanguageButton = styled.button`
     background-color: white;
     color: #032541;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 76.5rem) {
     display:none;
   }
 `;
 
 export const Badge = styled.div`
-  background-color: rgb(210, 144, 1);
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ background-color: rgb(210, 144, 1);
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50%;
+    color: #fff;
+    font-size: .9em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;

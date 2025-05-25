@@ -10,25 +10,17 @@ export const Overlay = styled.div`
   opacity: ${props => props.isOpen ? 1 : 0};
   visibility: ${props => props.isOpen ? 'visible' : 'hidden'};
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  font-family:'Source Sans Pro",Arial,sans-serif';
-  @media (min-width: 769px) {
-    display: none;
-  }
 `;
 
 export const SideNavContainer = styled.nav`
   position: fixed;
-  top: 64px;
   left: 0;
-  width: 341px;
+  width: 34.0625rem;
   height: 100vh;
   background: rgba( 3, 37, 65,.9);
   z-index: 1000;
   transform: translateX(${props => props.isOpen ? '0' : '-100%'});
   transition: transform 0.3s ease;
-  @media (min-width: 769px) {
-    display: none;
-  }
 `;
 
 export const SideNavContent = styled.div`
@@ -43,10 +35,10 @@ export const NavList = styled.ul`
   margin: 0;
   flex: 1;
   overflow-y: auto;
-  padding:25px 20px;
+  padding:25px 1.25rem;
   background:rgba( 3, 37, 65,.9);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(1.25rem);
+  backdrop-filter: blur(1.25rem);
 `;
 
 export const NavItem = styled.li`
@@ -57,15 +49,14 @@ export const NavLink = styled.a`
   display: flex;
   align-items: center;
   color: white;
-  line-height: 1;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   transition: all 0.2s ease;
   border-left: 3px solid transparent;
   
   &.primary {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     padding: 0 1.25rem 1rem 0;
   }

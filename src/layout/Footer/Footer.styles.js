@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-  position:fixed;
-  bottom:0;
   background-color: #032541;
   color: white;
   padding: 3rem 2rem 2rem;
@@ -11,14 +9,14 @@ export const FooterContainer = styled.footer`
 
 export const FooterWrapper = styled.div`
   height:100%;
-  max-width: 1400px;
+  max-width: 87.5rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width:100%;
   max-width:58rem;
-  @media (min-width: 768px) {
+  @media (min-width: 76.5rem) {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -31,7 +29,7 @@ export const LogoSection = styled.div`
   align-items: flex-start;
   gap: 1rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 76.5rem) {
     align-items: flex-start;
     flex-shrink: 0;
   }
@@ -50,7 +48,7 @@ export const JoinButton = styled.button`
 
   &:hover {
     background-color: #f0f0f0;
-    transform: translateY(-1px);
+    transform: translateY(-.0625rem);
   }
 `;
 
@@ -64,7 +62,7 @@ export const LinksContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 76.5rem) {
     grid-template-columns: repeat(4, 1fr);
     margin-left: 2rem;
   }
@@ -87,8 +85,8 @@ export const ColumnTitle = styled.h3`
 export const LinkItem = styled.a`
   color: #ffffff;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight:500;
+  font-size: .9rem;
+  font-weight:600;
   line-height: 1.6;
   cursor: pointer;
   transition: color 0.2s ease;

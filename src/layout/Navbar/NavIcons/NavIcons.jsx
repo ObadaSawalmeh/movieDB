@@ -1,14 +1,23 @@
-import IconContainer from "../../../components/shared/iconContainer/iconContainer";
-import useMediaQuery from "../../../hooks/useMediaQuery";
+// components/NavControls/NavIcons.jsx
+import ExpandedSearchInput from "components/shared/ExpandedSearchInput/ExpandedSearchInput";
+import IconContainer from "components/shared/iconContainer/iconContainer";
+import useMediaQuery from "hooks/useMediaQuery";
 import { Badge, ControlsWrapper, LanguageButton } from "./NavIcons.styles";
 
-const NavIcons = ({ language = "EN", onLanguageClick }) => {
+const NavIcons = ({ language = "EN", onLanguageClick, onSearch }) => {
   const handleLanguageClick = () => {
     if (onLanguageClick) {
       onLanguageClick();
     }
   };
-  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  const handleSearch = (searchTerm) => {
+    if (onSearch) {
+      onSearch(searchTerm);
+    }
+  };
+
+  const isMobile = useMediaQuery("(max-width: 76.5rem)");
 
   return (
     <ControlsWrapper>
@@ -29,12 +38,9 @@ const NavIcons = ({ language = "EN", onLanguageClick }) => {
       {/* Nav Icons */}
       <IconContainer iconName="notificationIcon.svg" alt="Notifications" />
       <Badge>o</Badge>
-      <IconContainer
-        iconName="searchIcon.svg"
-        alt="Search"
-        height="29px"
-        width="29px"
-      />
+
+      {/* Search Component */}
+      <ExpandedSearchInput onSearch={handleSearch} />
     </ControlsWrapper>
   );
 };

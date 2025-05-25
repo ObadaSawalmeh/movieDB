@@ -1,6 +1,6 @@
-import IconContainer from "../../components/shared/iconContainer/iconContainer";
-import { footerLabels } from "../../constants/footerLabels";
-import useMediaQuery from "../../hooks/useMediaQuery";
+import IconContainer from "components/shared/iconContainer/iconContainer";
+import { footerLabels } from "constants/footerLabels";
+import useMediaQuery from "hooks/useMediaQuery";
 
 import {
   ColumnTitle,
@@ -14,7 +14,7 @@ import {
 } from "./Footer.styles";
 
 const Footer = () => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 76.5rem)");
 
   return (
     <FooterContainer>
@@ -23,8 +23,8 @@ const Footer = () => {
           <IconContainer
             iconName="tmdbMobileIcon.svg"
             alt="TMDB Logo"
-            width="130px"
-            height="94px"
+            width="8.125rem"
+            height="9.25rem"
             visibility={isMobile}
           />
           <JoinButton>Hi ObadaSawalmeh!</JoinButton>

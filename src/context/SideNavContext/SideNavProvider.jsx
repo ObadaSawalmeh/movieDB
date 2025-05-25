@@ -1,14 +1,5 @@
-import { createContext, useContext, useState } from "react";
-
-const SideNavContext = createContext();
-
-export const useSideNav = () => {
-  const context = useContext(SideNavContext);
-  if (!context) {
-    throw new Error("useSideNav must be used within a SideNavProvider");
-  }
-  return context;
-};
+import { useState } from "react";
+import { SideNavContext } from "./SideNavContext";
 
 export const SideNavProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,4 +1,4 @@
-import { useSideNav } from "../../context/SideNavContext";
+import { useSideNav } from "context/SideNavContext/SideNavContext.js";
 import {
   NavItem,
   NavLink,
@@ -7,10 +7,7 @@ import {
   SideNavContent,
 } from "./Sidenav.styles.js";
 
-import {
-  primaryLinks,
-  secondaryLinks,
-} from "../../constants/sideNavOptions.js";
+import { primaryLinks, secondaryLinks } from "constants/sideNavOptions.js";
 
 const Sidenav = () => {
   const { isOpen, closeSideNav } = useSideNav();

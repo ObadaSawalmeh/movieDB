@@ -6,7 +6,7 @@ export const Menu = styled.button`
   color: white;
   cursor: pointer;
 
-  @media (min-width: 768px) {
+  @media (min-width: 76.5rem) {
     display: none;
   }
 `;

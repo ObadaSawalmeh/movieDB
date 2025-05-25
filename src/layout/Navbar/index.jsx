@@ -1,7 +1,4 @@
 import useMediaQuery from "../../hooks/useMediaQuery";
-import NavMenu from "./NavMenu/NavMenu";
-import NavControls from "./NavIcons/NavIcons";
-import NavLogo from "./NavLogo/NavLogo";
 import {
   CenterSection,
   HeaderContainer,
@@ -9,10 +6,13 @@ import {
   LeftSection,
   RightSection,
 } from "./index.styles";
+import NavControls from "./NavIcons/NavIcons";
 import NavItems from "./NavItems/NavItems";
+import NavLogo from "./NavLogo/NavLogo";
+import NavMenu from "./NavMenu/NavMenu";
 
 function Navbar() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 76.5rem)");
 
   return (
     <HeaderContainer>
