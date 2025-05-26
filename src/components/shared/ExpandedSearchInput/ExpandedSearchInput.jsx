@@ -1,6 +1,5 @@
-// components/shared/SearchInput/SearchInput.jsx
+import IconContainer from "components/shared/IconContainer/IconContainer";
 import { useEffect, useRef, useState } from "react";
-import IconContainer from "../iconContainer/iconContainer";
 import {
   CloseButton,
   SearchContainer,
@@ -84,7 +83,7 @@ const SearchInput = ({
       {isOpen && (
         <SearchWrapper>
           <IconContainer
-            iconName="ExpandedsearchIcon.svg"
+            iconName="expandedSearchIcon.svg"
             alt="Search"
             height="1.5rem"
             width="1.5rem"

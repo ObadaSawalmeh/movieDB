@@ -6,9 +6,9 @@ export const SectionContainer = styled.div`
 `;
 
 export const SectionHeader = styled.h3`
-  font-size: .875rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: #333333;
+  color: rgba(0, 0, 0, .5);;
   margin: 0 0 .75rem 0;
   text-transform: capitalize;
 `;
@@ -20,8 +20,8 @@ export const SectionContent = styled.div`
   border-radius: .25rem;
 `;
 
-export const GenreGrid = styled.div`
+export const SearchContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
+  flex-direction: column;
+  gap: .75rem;
 `;

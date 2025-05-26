@@ -5,8 +5,8 @@ export const PageWrapper = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 0rem auto 5rem auto;
+  padding: 0 1rem;
   max-width:87.5rem;
   gap:2rem;
   @media (max-width: 48rem) {
@@ -16,11 +16,13 @@ export const PageWrapper = styled.div`
 `;
 
 export const FilterWrapper = styled.div`
+  display: flex;
   width: 17.75rem;
   background: white;
-  padding: 20px 1.5rem;
+  padding: 2.25rem 1.5rem;
   height: 100vh;
-  overflow: hidden;
+  flex-direction: column;
+  gap: 1.4rem;
   @media (max-width: 48rem) {
     width:100%;
     height:100%;
@@ -28,21 +30,19 @@ export const FilterWrapper = styled.div`
  
 `;
 
-export const FilterHeader = styled.div`
-  margin-bottom: rem;
-  
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
-    margin: 0;
-   margin-bottom:1.5rem;
-  }
+export const FilterHeader = styled.h2`
+  font-size: 1.594rem;;
+  font-weight: 600;
+  width: 100%;
+  color: #333;
+  margin: 0;
+  font-stretch: 100%;
+  line-height:24px;
 `;
 
 export const ContentArea = styled.div`
   flex: 1;
-  padding: 20px 0;
+  padding: 0 0;
   overflow-y: auto;
   @media (max-width: 48rem) {
     width:100%;

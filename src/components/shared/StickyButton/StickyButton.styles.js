@@ -9,7 +9,7 @@ export const StyledStickyButton = styled.button`
   padding: 12px 24px;
   border: none;
   
-  background-color: ${(props) => (props.$isActive ? "rgb(1, 180, 228)" : '#0000080')};
+  background-color: ${(props) => (props.$isActive ? "rgb(1, 180, 228)" : '#000080')};
   color: ${(props) => (props.$isActive ? "white" : 'rgba(0, 0, 0, .5)')};
   
   font-size: 1.125rem;
@@ -20,15 +20,23 @@ export const StyledStickyButton = styled.button`
   cursor: pointer;
   transition: all 0.3s ease;
   
+  display: ${props => props.$isFooterVisible ? 'none' : 'flex'};
+  align-items: center;
+  justify-content: center;
+  
   transform: translateY(0);
   
   &:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
   }
   
   &:active {
-    transform: translateY(0);
+    transform: translateY(1px);
   }
+  
+  transform: translateY(${props => props.$isFooterVisible ? `-${props.$footerHeight + 20}px` : '0'});
+  opacity: ${props => props.$isFooterVisible ? '0.7' : '1'};
   
   /* Pulse animation when active */
   ${props => props.$isActive && `
@@ -39,7 +47,7 @@ export const StyledStickyButton = styled.button`
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
       50% {
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 4px 15px rgba(1, 180, 228, 0.4);
       }
       100% {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -47,8 +55,10 @@ export const StyledStickyButton = styled.button`
     }
   `}
   
-  /* Slide in animation */
-  animation: slideIn 0.3s ease-out;
+  /* Slide in animation - only on initial mount */
+  &.initial-mount {
+    animation: slideIn 0.3s ease-out;
+  }
   
   @keyframes slideIn {
     from {
@@ -61,11 +71,12 @@ export const StyledStickyButton = styled.button`
     }
   }
   
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    bottom: 0;
-    right: 0;
-    padding: 10px 20px;
-    font-size: 12px;
+  @media (max-width: 48rem) {
+    padding: .625rem 1.25rem;
+    font-size: 1rem;
+    
+    &:hover {
+      transform: translateY(-0.0625rem);
+    }
   }
 `;

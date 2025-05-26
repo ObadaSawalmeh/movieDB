@@ -1,9 +1,8 @@
-import { MovieCard } from "../MovieCard/MovieCard";
+import { MovieCard } from "components/MovieCard/MovieCard";
 import {
   ErrorContainer,
   GridContainer,
   LoadingContainer,
-  NoResultsContainer,
 } from "./MovieGrid.styles";
 
 export function MovieGrid({ movies, loading, error }) {
@@ -25,18 +24,6 @@ export function MovieGrid({ movies, loading, error }) {
       </ErrorContainer>
     );
   }
-
-  if (!movies || movies.length === 0) {
-    return (
-      <NoResultsContainer>
-        <div>
-          <h3>No movies found</h3>
-          <p>Try adjusting your filters or search criteria.</p>
-        </div>
-      </NoResultsContainer>
-    );
-  }
-
   return (
     <GridContainer>
       {movies.map((movie) => (

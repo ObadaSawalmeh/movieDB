@@ -1,4 +1,3 @@
-// shared/SearchInput/SearchInput.jsx
 import { InputContainer } from "./SearchInput.styles";
 
 export const SearchInput = ({ placeholder, value, onChange }) => {

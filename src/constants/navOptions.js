@@ -1,4 +1,3 @@
-// Navigation options with their corresponding tooltip options
 export const navItemsOptions = {
     tvShows: {
         label: "TV Shows",
@@ -36,5 +35,4 @@ export const navItemsOptions = {
     }
 };
 
-// Export just the main navigation options for the original component
 export const navOptions = Object.values(navItemsOptions).map(item => item.label);

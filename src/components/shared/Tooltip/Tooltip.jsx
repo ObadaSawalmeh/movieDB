@@ -8,11 +8,10 @@ import {
 const Tooltip = ({ options, isVisible, onOptionClick }) => {
   const tooltipRef = useRef(null);
 
-  // Handle clicks outside tooltip to close it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (tooltipRef.current && !tooltipRef.current.contains(event.target)) {
-        // Optional: You can add a callback here to close the tooltip
+        // u can add a callback here to close the tooltip
       }
     };
 

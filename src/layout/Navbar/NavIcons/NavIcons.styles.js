@@ -12,7 +12,7 @@ export const ControlsWrapper = styled.div`
 `;
 
 export const LanguageButton = styled.button`
-  width: 2.5rem;
+  width: 1.75rem;
   height: 1.;
   padding: 3px 5px;
   display: flex;

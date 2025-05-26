@@ -1,4 +1,4 @@
-import IconContainer from "components/shared/iconContainer/iconContainer";
+import IconContainer from "components/shared/IconContainer/IconContainer";
 import useMediaQuery from "hooks/useMediaQuery";
 
 function NavLogo() {

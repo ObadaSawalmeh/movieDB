@@ -1,4 +1,4 @@
-import Tooltip from "components/Tooltip/Tooltip";
+import Tooltip from "components/shared/Tooltip/Tooltip";
 import { navItemsOptions } from "constants/navOptions";
 import { useState } from "react";
 import { NavContainer, NavItem, NavLink } from "./NavItems.styles";

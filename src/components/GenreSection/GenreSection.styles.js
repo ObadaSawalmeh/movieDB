@@ -8,7 +8,7 @@ export const SectionContainer = styled.div`
 export const SectionHeader = styled.h3`
   font-size: .875rem;
   font-weight: 600;
-  color: #333333;
+  color: #000;
   margin: 0 0 .75rem 0;
   text-transform: capitalize;
 `;
@@ -20,8 +20,8 @@ export const SectionContent = styled.div`
   border-radius: .25rem;
 `;
 
-export const SearchContainer = styled.div`
+export const GenreGrid = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: .75rem;
+  flex-wrap: wrap;
+  gap: .5rem;
 `;

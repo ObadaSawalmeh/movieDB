@@ -1,4 +1,4 @@
-import IconContainer from "components/shared/iconContainer/iconContainer.jsx";
+import IconContainer from "components/shared/IconContainer/IconContainer.jsx";
 import { useSideNav } from "context/SideNavContext/SideNavContext.js";
 import { Menu } from "./NavMenu.styles";
 

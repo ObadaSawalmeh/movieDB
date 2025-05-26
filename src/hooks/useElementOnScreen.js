@@ -8,7 +8,6 @@ export function useElementOnScreen(ref, rootMargin = '0px') {
 
         const observer = new IntersectionObserver(
             ([entry]) => setIsIntersecting(entry.isIntersecting),
-            { root: null, rootMargin, threshold: 0 }
         );
 
         observer.observe(ref.current);

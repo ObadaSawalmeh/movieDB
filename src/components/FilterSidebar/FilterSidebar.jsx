@@ -1,8 +1,8 @@
+import { GenreSection } from "components/GenreSection/GenreSection";
+import { SearchSection } from "components/SearchSection/SearchSection";
+import { SortSection } from "components/SortSection/SortSection";
 import { ActionButton } from "components/shared/ActionButton/ActionButton";
 import { DropdownSection } from "components/shared/DropdownSection/DropdownSection";
-import { GenreSection } from "components/shared/GenreSection/GenreSection";
-import { SearchSection } from "components/shared/SearchSection/SearchSection";
-import { SortSection } from "components/shared/SortSection/SortSection";
 import { StickyButton } from "components/shared/StickyButton/StickyButton";
 import { filterLabels, sortOptions } from "constants/filterConstants";
 import { useElementOnScreen } from "hooks/useElementOnScreen";
@@ -23,7 +23,6 @@ export const FilterSidebar = ({ onFiltersChange, initialFilters = {} }) => {
   const [isSortOpen, setIsSortOpen] = useState(false);
   const [isFiltersOpen, setIsFiltersOpen] = useState(true);
 
-  // Update local state when initialFilters change (from URL)
   useEffect(() => {
     if (initialFilters.selectedGenres !== undefined) {
       setSelectedGenres(initialFilters.selectedGenres);
@@ -31,23 +30,14 @@ export const FilterSidebar = ({ onFiltersChange, initialFilters = {} }) => {
     if (initialFilters.sortBy !== undefined) {
       setSortBy(initialFilters.sortBy);
     }
-    setSearchKeyword("");
+    setSearchKeyword(initialFilters.searchKeyword || "");
   }, [initialFilters]);
 
   const handleGenreToggle = (genre) => {
     const newGenres = selectedGenres.includes(genre)
       ? selectedGenres.filter((g) => g !== genre)
       : [...selectedGenres, genre];
-
     setSelectedGenres(newGenres);
-
-    if (onFiltersChange) {
-      onFiltersChange({
-        selectedGenres: newGenres,
-        searchKeyword: initialFilters.searchKeyword || "",
-        sortBy,
-      });
-    }
   };
 
   const handleSearch = () => {
@@ -76,18 +66,12 @@ export const FilterSidebar = ({ onFiltersChange, initialFilters = {} }) => {
 
   const handleSortChange = (newSortBy) => {
     setSortBy(newSortBy);
-
-    if (onFiltersChange) {
-      onFiltersChange({
-        selectedGenres,
-        searchKeyword: initialFilters.searchKeyword || "",
-        sortBy: newSortBy,
-      });
-    }
   };
 
   const isFilterActive =
-    selectedGenres.length > 0 || searchKeyword.trim() !== "";
+    selectedGenres.length > 0 ||
+    searchKeyword.trim() !== "" ||
+    sortBy !== (initialFilters.sortBy || "popularityDescending");
 
   return (
     <>
@@ -130,6 +114,7 @@ export const FilterSidebar = ({ onFiltersChange, initialFilters = {} }) => {
               ref={searchButtonRef}
               onClick={handleSearch}
               isActive={isFilterActive}
+              disabled={!isFilterActive}
             >
               {filterLabels.search}
             </ActionButton>
@@ -142,6 +127,7 @@ export const FilterSidebar = ({ onFiltersChange, initialFilters = {} }) => {
         isActive={isFilterActive}
         isVisible={!isSearchButtonVisible && isFilterActive}
         title="Search with current filters"
+        disabled={!isFilterActive}
       >
         {filterLabels.search}
       </StickyButton>

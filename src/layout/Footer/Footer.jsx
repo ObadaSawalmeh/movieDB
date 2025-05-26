@@ -1,4 +1,4 @@
-import IconContainer from "components/shared/iconContainer/iconContainer";
+import IconContainer from "components/shared/IconContainer/IconContainer";
 import { footerLabels } from "constants/footerLabels";
 import useMediaQuery from "hooks/useMediaQuery";
 
@@ -17,7 +17,7 @@ const Footer = () => {
   const isMobile = useMediaQuery("(max-width: 76.5rem)");
 
   return (
-    <FooterContainer>
+    <FooterContainer as="footer" data-testid="footer">
       <FooterWrapper>
         <LogoSection>
           <IconContainer

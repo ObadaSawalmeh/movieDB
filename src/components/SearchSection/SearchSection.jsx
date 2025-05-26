@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SearchInput } from "../SearchInput/SearchInput";
+import { SearchInput } from "components/shared/SearchInput/SearchInput";
 import {
   SearchContainer,
   SectionContainer,
@@ -11,7 +11,6 @@ export const SearchSection = ({
   searchKeyword = "",
   onKeywordChange,
   onSearch,
-  isActive = false,
   sectionTitle = "Keywords",
   placeholder = "Search keywords...",
 }) => {

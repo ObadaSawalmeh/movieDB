@@ -5,7 +5,6 @@ export const DropdownContainer = styled.div`
   background-color: #ffffff;
   box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .1);
   border-radius:.5rem;
-  border: .0625rem solid #e3e3e3;
 `;
 
 export const DropdownHeader = styled.div`
@@ -22,20 +21,21 @@ export const DropdownHeader = styled.div`
 `;
 
 export const DropdownTitle = styled.h2`
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: #333333;
+  color: #000;
   margin: 0;
   text-transform: capitalize;
 `;
 
 export const DropdownIcon = styled.span`
   font-size: .75rem;
-  color: #666666;
+  color: #000;
   transition: transform 0.2s ease;
   transform: ${props => props.isOpen ? 'rotate(90deg)' : 'rotate(0deg)'};
 `;
 
 export const DropdownContent = styled.div`
+  border-radius: .5rem;s
   background-color: #ffffff;
 `;

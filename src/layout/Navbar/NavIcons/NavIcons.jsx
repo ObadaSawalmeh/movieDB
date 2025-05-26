@@ -1,6 +1,6 @@
 // components/NavControls/NavIcons.jsx
 import ExpandedSearchInput from "components/shared/ExpandedSearchInput/ExpandedSearchInput";
-import IconContainer from "components/shared/iconContainer/iconContainer";
+import IconContainer from "components/shared/IconContainer/IconContainer";
 import useMediaQuery from "hooks/useMediaQuery";
 import { Badge, ControlsWrapper, LanguageButton } from "./NavIcons.styles";
 

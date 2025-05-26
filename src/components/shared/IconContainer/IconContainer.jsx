@@ -1,4 +1,4 @@
-import { StyledIcon } from "./iconContainer.styles";
+import { StyledIcon } from "./IconContainer.styles";
 
 const IconContainer = ({
   iconName,

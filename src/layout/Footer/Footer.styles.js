@@ -5,17 +5,40 @@ export const FooterContainer = styled.footer`
   color: white;
   padding: 3rem 2rem 2rem;
   width: 100%;
+  
+  /* Set CSS custom property for footer height calculation */
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    pointer-events: none;
+  }
+  
+  /* Approximate footer height for sticky button positioning */
+  --footer-height: 220px;
+  
+  @media (max-width: 76.5rem) {
+    --footer-height: 280px;
+  }
+  
+  @media (max-width: 480px) {
+    --footer-height: 350px;
+  }
 `;
 
 export const FooterWrapper = styled.div`
-  height:100%;
+  height: 100%;
   max-width: 87.5rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width:100%;
-  max-width:58rem;
+  width: 100%;
+  max-width: 58rem;
+  
   @media (min-width: 76.5rem) {
     flex-direction: row;
     justify-content: space-between;
@@ -48,7 +71,7 @@ export const JoinButton = styled.button`
 
   &:hover {
     background-color: #f0f0f0;
-    transform: translateY(-.0625rem);
+    transform: translateY(-0.0625rem);
   }
 `;
 
@@ -85,12 +108,13 @@ export const ColumnTitle = styled.h3`
 export const LinkItem = styled.a`
   color: #ffffff;
   text-decoration: none;
-  font-size: .9rem;
-  font-weight:600;
+  font-size: 0.9rem;
+  font-weight: 600;
   line-height: 1.6;
   cursor: pointer;
   transition: color 0.2s ease;
   white-space: normal;
+  
   &:hover {
     color: white;
   }

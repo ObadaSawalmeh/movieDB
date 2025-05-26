@@ -16,11 +16,6 @@ export const StyledActionButton = styled.button`
   transition: all 0.2s ease;
   text-transform: capitalize;
 
-  &:hover {
-    background-color: #032541;
-    color: white;
-    transform: translateY(-0.0625rem);
-  }
 
   &:active {
     transform: translateY(0);

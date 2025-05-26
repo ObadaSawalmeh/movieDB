@@ -18,7 +18,6 @@ export function useTmdb(endpoint, queryParams = {}) {
         return new URLSearchParams(params).toString();
     }, [queryParams, page]);
 
-    // Detect endpoint or param changes and reset results/page
     useEffect(() => {
         const endpointChanged = endpoint !== prevEndpointRef.current;
         const paramsChanged = JSON.stringify(queryParams) !== prevParamsRef.current;
@@ -61,10 +60,9 @@ export function useTmdb(endpoint, queryParams = {}) {
         fetchData();
     }, [endpoint, queryString, page]);
 
-    // In useTmdb.js
     const loadMore = useCallback(() => {
         setPage(prev => prev + 1);
-    }, []); // Empty dependency array since setPage is stable
+    }, []);
 
     return { data, loading, error, loadMore };
 }

@@ -1,4 +1,3 @@
-// shared/SearchInput/SearchInput.styles.js
 import styled from 'styled-components';
 
 export const InputContainer = styled.input`
@@ -6,14 +5,14 @@ export const InputContainer = styled.input`
   padding: 10px .75rem;
   border: .0625rem solid #dee2e6;
   border-radius: 6px;
-  font-size: .25rem;
-  color: #495057;
+  font-size: .875rem;
+  color: #000;
   background-color: #ffffff;
   transition: all 0.2s ease;
   box-sizing: border-box;
-
+  font-weight: 600;
   &::placeholder {
-    color: #adb5bd;
+    color: #000;
   }
 
   &:focus {

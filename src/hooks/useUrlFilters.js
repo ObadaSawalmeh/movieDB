@@ -17,19 +17,16 @@ export function useUrlFilters(defaultFilters = {}) {
             ...defaultFilters
         };
 
-        // Parse genres (comma-separated numbers)
         const genresParam = params.get('genres');
         if (genresParam) {
             filters.selectedGenres = genresParam.split(',').map(Number).filter(Boolean);
         }
 
-        // Parse search keyword
         const searchParam = params.get('search');
         if (searchParam) {
             filters.searchKeyword = decodeURIComponent(searchParam);
         }
 
-        // Parse sort
         const sortParam = params.get('sort');
         if (sortParam) {
             filters.sortBy = sortParam;
@@ -38,7 +35,6 @@ export function useUrlFilters(defaultFilters = {}) {
         return filters;
     }, [location.search, defaultFilters]);
 
-    // Update URL with filters
     const updateUrlWithFilters = useCallback((filters) => {
         const params = new URLSearchParams();
 

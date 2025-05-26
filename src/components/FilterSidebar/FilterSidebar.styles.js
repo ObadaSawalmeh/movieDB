@@ -7,7 +7,6 @@ export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  overflow: hidden;
   @media (max-width: 48rem) {
     width: 100%;
     z-index: 1000;

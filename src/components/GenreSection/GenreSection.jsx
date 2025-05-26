@@ -1,5 +1,5 @@
-import { useGenres } from "../../../hooks/useTmdb";
-import { FilterChip } from "../FilterChip/FilterChip";
+import { FilterChip } from "components/shared/FilterChip/FilterChip";
+import { useGenres } from "hooks/useTmdb";
 import {
   GenreGrid,
   SectionContainer,

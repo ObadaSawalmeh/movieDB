@@ -1,4 +1,3 @@
-// components/shared/SearchInput/SearchInput.styles.js
 import styled from 'styled-components';
 
 export const SearchContainer = styled.div`
@@ -43,7 +42,6 @@ export const SearchInputField = styled.input`
   font-size: 1rem;
   outline: none;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.7);
